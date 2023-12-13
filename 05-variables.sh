@@ -13,18 +13,12 @@ read -s PASSWORD
 
 # The Value entered above will be automatically attached to Password.
 
-echo "The Username is: $USERNAME," \n "The Password is: $PASSWORD"
+echo "The Username is: $USERNAME, The Password is: $PASSWORD"
 
 
-
-
-
-//
 
 # The concept is, if w want to connect the External System/Server from the script.
 # USERNAME=$1
 # PASSWORD=$2
 
 # echo "Username is: $USERNAME, Password is: $PASSWORD"
-
-//
