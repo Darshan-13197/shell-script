@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# The concept is, if w want to connect the External System/Server from the script.
+# The concept is, if we want to connect the External System/Server from the script.
 # Since the UN and Pass is Confidential. By using read -s It should be Hidden when we are typing it.
 
 echo "Please Enter your Username: "
