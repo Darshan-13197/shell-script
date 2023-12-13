@@ -1,9 +1,11 @@
 #!/bin/bash
 
+
+# Adding Variable Data types (PERSON) to call the Values (Ramesh, Suresh)
 PERSON1=Ramesh
 PERSON2=Suresh
 
-echo "Ramesh: Hi Suresh, Good Morning."
-echo "Suresh: Hi Ramesh, Very Good Morning."
-echo "Ramesh: How are you Suresh?"
-echo "Suresh: I am Good Suresh."
+echo "$PERSON1: Hi $PERSON2, Good Morning."
+echo "$PERSON2: Hi $PERSON1, Very Good Morning."
+echo "$PERSON1: How are you $PERSON2?"
+echo "$PERSON2: I am Good $PERSON1."
