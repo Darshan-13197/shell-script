@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Declaring the FRUITS 
-FRUITS ("Apple" "Mango" "Banana")
+FRUITS=("Apple" "Mango" "Banana")
 
 echo "First Value is : ${FRUITS[0]}"
 echo "First Value is : ${FRUITS[1]}"
