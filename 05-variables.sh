@@ -13,6 +13,10 @@ read -s PASSWORD
 
 # The Value entered above will be automatically attached to Password.
 
+echo "The Username is: $USERNAME," \n "The Password is: $PASSWORD"
+
+
+
 
 
 //
