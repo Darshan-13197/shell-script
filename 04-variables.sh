@@ -1,7 +1,7 @@
 #!/bin/bash
 
-
 # Here we passing the Arguments == args which we can control it from Outside.
+
 PERSON1=$1
 PERSON2=$2
 
