@@ -2,6 +2,7 @@
 
 # gt=greater than, lt=lesser than, ge=greater than equal, lt=lesser than equal
 
+NUMBER=$1
 if [ $NUMBER -gt 100 ]
 then
     echo "Given Number $NUMBER is Greater than 100"
