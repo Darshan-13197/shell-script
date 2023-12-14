@@ -9,3 +9,5 @@ then
 else
     echo "Given Number $NUMBER is Not Greater than 100"
 fi 
+
+#whle running the Program pass the input.
