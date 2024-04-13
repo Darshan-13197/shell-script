@@ -1,5 +1,6 @@
 #!/bin/bash
 
+## Check user is root or Not
 ID=$(id -u)
 if [$ID -ne 0]  
 then 
