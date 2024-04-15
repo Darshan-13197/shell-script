@@ -21,3 +21,15 @@ then
 else
     echo "Successfully Installed MySQL"
 fi
+
+yum install git -y
+
+#TO VALIDATE
+
+if [ $? -ne 0 ]
+then
+    echo "Error :: Installing GIT is Failed"
+    exit 1
+else
+    echo "Successfully Installed GIT"
+fi
