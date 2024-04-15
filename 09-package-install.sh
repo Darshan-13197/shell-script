@@ -14,7 +14,7 @@ yum install mysql -y
 
 #TO VALIDATE
 
-if [ $? ne 0 ]
+if [ $? -ne 0 ]
 then
     echo "Error :: Installing MySQL is Failed"
     exit 1
