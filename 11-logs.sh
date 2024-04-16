@@ -35,3 +35,10 @@ VALIDATE $? "Installing MySQL" # Giving Some inputs for the Validate Function
 
 yum install git -y 
 VALIDATE $? "Installing Git"
+
+# Using REDIRECTION, it will show the stored result ifand display the output, if  
+# 1 --> Success
+# 2 --> Failure
+# & --> Both Success and Failure
+# > --> Replace Prev output
+# >> --> Append the output
