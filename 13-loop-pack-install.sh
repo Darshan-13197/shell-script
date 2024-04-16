@@ -33,23 +33,21 @@ VALIDATE() {
 }
 
 # To check the Root user
-if [ $ID -ne 0 ]:
+if [ $ID -ne 0 ]
 then
     echo -e "$R ERROR:: Please run the script with root access $N"
     exit 1
 else
     echo "You are ROOT USER"
 fi # fi means reverse of if, indicating condition end
-
 # echo "All arguments passed: $@"
-# git mysql postfix net-tools
+# Package --> git mysql postfix net-tools
 # package=git for first time
-
 
 #To Install the Package using Loops
 for package in $@
 do 
-    yum list installed $package &>> $LOGFILE # To check Installed or Not
+    yum list installed $package &>> $LOGFILE # To check Package is Installed or Not
     if [ $? -ne 0 ]
     then 
         yum install $package -y &>> $LOGFILE #Install the Package
