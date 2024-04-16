@@ -24,15 +24,16 @@ VALIDATE() {
 
     if [ $1 -ne 0 ]
     then 
-        echo "$RED Error :: $2 ....is Failed $RED"
+    # -e --> whch enables the Interpretation of Backslash Escapes
+        echo -e "$RED Error :: $2 ....is Failed $RED"
         exit 1
     else
-        echo "$GREEN $2 .... $NORMAL is Success"
+        echo -e "$GREEN $2 .... $NORMAL is Success"
     fi
 
 }
 
-# -e --> whch enables the Interpretation of Backslash Escapes
+
 
 if [ $ID -ne 0 ]  
 then 
