@@ -33,9 +33,9 @@ VALIDATE() {
 }
 
 # To check the Root user
-if [ $ID -ne 0 ]:
+if [ $ID -ne 0 ]
 then
-    echo -e "$R ERROR :: Please run the script with root access"
+    echo -e "$R ERROR:: Please run the script with root access"
     exit 1
 else
     echo -e "$Y You are ROOT USER"
@@ -52,7 +52,7 @@ do
     yum list installed $package &>> $LOGFILE # To check Installed or Not
     if [ $? -ne 0 ]
     then 
-        yum install $package -y %>> $LOGFILE #Install the Package
+        yum install $package -y &>> $LOGFILE #Install the Package
         VALIDATE $? "Installatin of $package" #validating
     else
         echo -e "$package is already installed ... $Y SUCCESS "
