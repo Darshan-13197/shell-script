@@ -3,6 +3,11 @@
 ## Check user is root or Not
 ID=$(id -u)
 
+RED = "\e[31m"
+GREEN = "\e[32m"
+YELLOW = "\e[33m"
+NORMAL = "\e[0m"
+
 # To print the the DATE & TIMESTAMP
 TIMESTAMP=$(date +%F-%H-%M-%S)
 
@@ -19,13 +24,15 @@ VALIDATE() {
 
     if [ $1 -ne 0 ]
     then 
-        echo "Error :: $2 ....is Failed"
+        echo "$RED Error :: $2 ....is Failed $RED"
         exit 1
     else
-        echo "$2 .... is Success"
+        echo "$GREEN $2 .... $NORMAL is Success"
     fi
 
 }
+
+# -e --> whch enables the Interpretation of Backslash Escapes
 
 if [ $ID -ne 0 ]  
 then 
