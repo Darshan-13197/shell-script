@@ -3,10 +3,10 @@
 ## Check user is root or Not
 ID=$(id -u)
 
-RED = "\e[31m"
-GREEN = "\e[32m"
-YELLOW = "\e[33m"
-NORMAL = "\e[0m"
+RED="\e[31m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+NORMAL="\e[0m"
 
 # To print the the DATE & TIMESTAMP
 TIMESTAMP=$(date +%F-%H-%M-%S)
