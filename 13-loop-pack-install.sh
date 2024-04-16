@@ -38,7 +38,7 @@ then
     echo -e "$R ERROR:: Please run the script with root access $N"
     exit 1
 else
-    echo -e "$Y You are ROOT USER $N"
+    echo "You are ROOT USER"
 fi # fi means reverse of if, indicating condition end
 
 # echo "All arguments passed: $@"
