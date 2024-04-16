@@ -10,7 +10,7 @@
 
 #!/bin/bash
 
-ID=($id -u)
+ID=($ID -u)
 
 R="\e[31m"
 G="\e[32m"
