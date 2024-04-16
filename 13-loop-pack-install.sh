@@ -32,14 +32,22 @@ VALIDATE() {
     fi 
 }
 
-# To check the Root user
 if [ $ID -ne 0 ]
 then
-    echo -e "$R ERROR:: Please run the script with root access $N"
-    exit 1
+    echo -e "$R ERROR:: Please run this script with root access $N"
+    exit 1 # you can give other than 0
 else
-    echo "You are ROOT USER"
+    echo "You are root user"
 fi # fi means reverse of if, indicating condition end
+
+# # To check the Root user
+# if [ $ID -ne 0 ]
+# then
+#     echo -e "$R ERROR:: Please run the script with root access $N"
+#     exit 1
+# else
+#     echo "You are ROOT USER"
+# fi # fi means reverse of if, indicating condition end
 # echo "All arguments passed: $@"
 # Package --> git mysql postfix net-tools
 # package=git for first time
