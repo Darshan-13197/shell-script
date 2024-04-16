@@ -26,19 +26,19 @@ echo "Script Started Executing at $TIMESTAMP" &>> $LOGFILE
 VALIDATE() { 
     if [ $1 -ne 0 ]
     then 
-        echo -e "$2 .. $R FAILED"
+        echo -e "$2 .. $R FAILED $N"
     else
-        echo -e "$1 .. $G SUCCESS"
+        echo -e "$1 .. $G SUCCESS $N"
     fi 
 }
 
 # To check the Root user
 if [ $ID -ne 0 ]
 then
-    echo -e "$R ERROR:: Please run the script with root access"
+    echo -e "$R ERROR:: Please run the script with root access $N"
     exit 1
 else
-    echo -e "$Y You are ROOT USER"
+    echo -e "$Y You are ROOT USER $N"
 fi # fi means reverse of if, indicating condition end
 
 # echo "All arguments passed: $@"
@@ -55,6 +55,6 @@ do
         yum install $package -y &>> $LOGFILE #Install the Package
         VALIDATE $? "Installatin of $package" #validating
     else
-        echo -e "$package is already installed ... $Y SUCCESS "
+        echo -e "$package is already installed ... $Y SKIPPING $N"
     fi
 done
