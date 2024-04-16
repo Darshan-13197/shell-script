@@ -20,45 +20,26 @@ N="\e[0m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-# echo "Script Started Executing at $TIMESTAMP" &>> $LOGFILE
+echo "Script Started Executing at $TIMESTAMP" &>> $LOGFILE
 
-# #Creating Funcition
-# VALIDATE() { 
-#     if [ $1 -ne 0 ]
-#     then 
-#         echo -e "$2 .. $R FAILED $N"
-#     else
-#         echo -e "$1 .. $G SUCCESS $N"
-#     fi 
-# }
-
-echo "script stareted executing at $TIMESTAMP" &>> $LOGFILE
-
-VALIDATE(){
+#Creating Funcition
+VALIDATE() { 
     if [ $1 -ne 0 ]
-    then
-        echo -e "$2 ... $R FAILED $N"
+    then 
+        echo -e "$2 .. $R FAILED $N"
     else
-        echo -e "$2 ... $G SUCCESS $N"
-    fi
+        echo -e "$1 .. $G SUCCESS $N"
+    fi 
 }
 
-if [ $ID -ne 0 ]
+# To check the Root user
+if [ $ID ne 0 ]
 then
-    echo -e "$R ERROR:: Please run this script with root access $N"
-    exit 1 # you can give other than 0
+    echo -e "$R ERROR:: Please run the script with root access $N"
+    exit 1
 else
-    echo "You are root user"
+    echo "You are ROOT USER"
 fi # fi means reverse of if, indicating condition end
-
-# # To check the Root user
-# if [ $ID -ne 0 ]
-# then
-#     echo -e "$R ERROR:: Please run the script with root access $N"
-#     exit 1
-# else
-#     echo "You are ROOT USER"
-# fi # fi means reverse of if, indicating condition end
 # echo "All arguments passed: $@"
 # Package --> git mysql postfix net-tools
 # package=git for first time
