@@ -1,8 +1,12 @@
+# In this Script, we have Imlemented as per Best Practice
+    # Color, LogFile, Funcition without repeating
+
 #!/bin/bash
 
 ## Check user is root or Not
 ID=$(id -u)
 
+#To Implement the COLORS
 RED="\e[31m"
 GREEN="\e[32m"
 YELLOW="\e[33m"
@@ -14,6 +18,8 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 #For LogFile, we are storing in /tmp directory (for Practice)
 # which will print the File name along with date and time.
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
+
+echo "Script Started Executing at $TIMESTAMP" &>> $LOGFILE
 
 # $? --> Exit status of the previos command
 # $0 --> you will get Script name
@@ -60,3 +66,5 @@ VALIDATE $? "Installing Git"
 # & --> Both Success and Failure
 # > --> Replace Prev output
 # >> --> Append the output
+
+
