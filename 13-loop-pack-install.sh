@@ -33,7 +33,7 @@ VALIDATE() {
 }
 
 # To check the Root user
-if [ $ID -ne 0 ]
+if [ $ID -ne 0 ]:
 then
     echo -e "$R ERROR :: Please run the script with root access"
     exit 1
