@@ -24,7 +24,7 @@ echo "Script Started Executing at $TIMESTAMP" &>> $LOGFILE
 
 #Creating Funcition
 VALIDATE() { 
-    if [ $1 ne 0 ]
+    if [ $1 -ne 0 ]
     then 
         echo -e "$2 .. $R FAILED"
     else
@@ -33,7 +33,7 @@ VALIDATE() {
 }
 
 # To check the Root user
-if [ $ID ne 0 ] 
+if [ $ID -ne 0 ]
 then
     echo -e "$R ERROR :: Please run the script with root access"
     exit 1
@@ -50,7 +50,7 @@ fi # fi means reverse of if, indicating condition end
 for package in $@
 do 
     yum list installed $package &>> $LOGFILE # To check Installed or Not
-    if [ $? ne 0 ]
+    if [ $? -ne 0 ]
     then 
         yum install $package -y %>> $LOGFILE #Install the Package
         VALIDATE $? "Installatin of $package" #validating
