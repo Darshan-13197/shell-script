@@ -3,10 +3,17 @@
 ## Check user is root or Not
 ID=$(id -u)
 
+# To print the the DATE & TIMESTAMP
+TIMESTAMP=$(date +%F-%H-%M-%S)
+
+#For LogFile, we are storing in /tmp directory (for Practice)
+# which will print the File name along with date and time.
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
+
 # $? --> Exit status of the previos command
 # $0 --> you will get Script name
 
-echo "Script Name: $0"
+#echo "Script Name: $0"
 
 VALIDATE() {
 
@@ -30,10 +37,13 @@ fi #fi means reveres of if indicating the condition end
 
 # How to call the Function and Retrive
 
-yum install mysql -y
+
+yum install mysql -y &>> $LOGFILE # Call the LOGFILE in every command
+
 VALIDATE $? "Installing MySQL" # Giving Some inputs for the Validate Function
 
-yum install git -y 
+yum install git -y &>> $LOGFILE
+
 VALIDATE $? "Installing Git"
 
 # Using REDIRECTION, it will show the stored result ifand display the output, if  
