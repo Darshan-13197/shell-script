@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Fix the Source Directory
-file="/etc/passwd"
+file=/etc/passwd
 
 R="\e[31m"
 G="\e[32m"
@@ -15,9 +15,9 @@ then
     echo -e "$R Source directory: $file does not exists. $N"
 fi
 
-while IFS":" read -r username password userID user-grpID User Full Name User-HomeDir User-shell_path
+while IFS=":" read -r username password userID user-grpID User Full Name User-HomeDir User-shell_path
 do
     echo "username: $username"
     echo "userID: $userID"
 
-done < file
+done < $file
