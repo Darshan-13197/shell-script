@@ -17,18 +17,19 @@ fi
 
 FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log")
 
-while IFS= read -r line
+# we can use "rm -rf " but here we are using WHILE Loop to check the command output
+while IFS= read -r line # it will read the Output Line by Line
 do
     echo "Deleting file: $line"
-    rm -rf $line
-done <<< $FILES_TO_DELETE
+    rm -rf $line # It will delete the File Permanently.
+done <<< $FILES_TO_DELETE # <<< --> It will give/denote the Input from the command to done
 
 # To Find the Files in a Directory.
 # Syntax:
 #   find . -type f -mtime +10 -name "<filename>"
     # find        --> Searching
     # .           --> Current Dir,
-    # -type f     --> All File Types not Folder.
+    # -type f     --> Will Display All Files Types not Folder.
     # -mtime +10  --> To find a File More than 10 days
     # -name       --> Display File name
     # <filename> --> Display only the Specific Filename i.e. "*.log"
