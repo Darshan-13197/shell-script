@@ -7,7 +7,7 @@ DISK_THRESHOLD=1
 # Usually we give 70% but our Disk is not used more than 70.
 message=""
 
-while IFS= readline
+while IFS= read line
 do
     #Here we are printing only the 6th Fragment and removing the % and Last Fragement
     usage=$(echo $line | awk '{print $6F}' | cut -d % -f1)
