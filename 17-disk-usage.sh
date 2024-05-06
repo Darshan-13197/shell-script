@@ -24,4 +24,6 @@ do
 done <<< $DISK_USAGE #<<< --> This is for Command output.
 echo -e "Message:$message" # we are enabling the special character.
 
-echo "$message" | mail -s "High Disk usage" darshanvd13197@gmail.com
+#echo "$message" | mail -s "High Disk usage" darshanvd13197@gmail.com
+
+sh mail.sh "DevOps Team" "High Dish Usage:" "$message" "darshanvd13197@gmail.com"
