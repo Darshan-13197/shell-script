@@ -22,3 +22,5 @@ do
     fi
 done <<< DISK_USAGE #<<< --> This is for Command output.
 echo -e "Message:$message" # we are enabling the special character.
+
+echo "$message" | mail -s "High Disk usage" darshanvd13197@gmail.com
