@@ -22,8 +22,9 @@ do
         #+= --> It will add Multiple Entries without overwrite. you can remove + and check
     fi
 done <<< $DISK_USAGE #<<< --> This is for Command output.
-echo -e "Message:$message" # we are enabling the special character.
+echo -e "Message: $message" # we are enabling the special character.
 
 #echo "$message" | mail -s "High Disk usage" darshanvd13197@gmail.com
 
-sh mail.sh "DevOps Team" "High Dish Usage:" "$message" "darshanvd13197@gmail.com"
+# Mail      which team      Alert_Type       Body msg   To Email                    Subject Email
+sh mail.sh "DevOps Team" "High Disk Usage:" "$message" "darshanvd13197@gmail.com" "ALERT HIGH DISK USAGE"
