@@ -18,7 +18,7 @@ do
     #Condition is usage should be greather than Threshold
     if [ $usage -ge $DISK_THRESHOLD ]
     then
-        message+="High Disk Usage on $partition: $usage </br>" 
+        message+="High Disk Usage on $partition: $usage \n" 
         #+= --> It will add Multiple Entries without overwrite. you can remove + and check
     fi
 done <<< $DISK_USAGE #<<< --> This is for Command output.
