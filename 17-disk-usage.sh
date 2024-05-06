@@ -20,7 +20,7 @@ do
         message+="High Disk Usage on $partition: $usage\n" 
         #+= --> It will add Multiple Entries without overwrite. you can remove + and check
     fi
-done <<< DISK_USAGE #<<< --> This is for Command output.
+done <<< $DISK_USAGE #<<< --> This is for Command output.
 echo -e "Message:$message" # we are enabling the special character.
 
 echo "$message" | mail -s "High Disk usage" darshanvd13197@gmail.com
