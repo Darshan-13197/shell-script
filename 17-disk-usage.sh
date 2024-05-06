@@ -15,7 +15,7 @@ do
     partition=$(echo $line | awk '{print $1F}')
 
     #Condition is usage should be greather than Threshold
-    if [$usage -ge $DISK_THRESHOLD]
+    if [ $usage -ge $DISK_THRESHOLD ]
     then
         message+="High Disk Usage on $partition: $usage\n" 
         #+= --> It will add Multiple Entries without overwrite. you can remove + and check
