@@ -30,6 +30,6 @@ if [ -z "$NAME" ] || [ -z "$WISHES" ]; then # if both are empty will show ERROR
     echo "ERROR: Both -n and -w are Mandatory Options"
     echo "ERROR: -n is Mandatory"
     USAGE
-    exit1   
+    exit 1   
 fi
-echo "Hello $NAME $WISHES, I have been learning Shell Script"
+echo "Hello $NAME, $WISHES, I have been learning Shell Script"
