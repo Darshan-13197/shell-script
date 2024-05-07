@@ -22,3 +22,14 @@ while getopts "n:w:h" opt; do
         h) USAGE; exit;; #calling usage function
     esac
 done
+
+#We are writing some Validation for the OPTIONS.
+
+if [ -z "$NAME" ] || [ -z "$WISHES" ]; then
+if [ -z "$NAME" ]; then #Now wishes is optional
+    echo "ERROR: Both -n and -w are Mandatory Options"
+    echo "ERROR: -n is Mandatory"
+    USAGE
+    exit1   
+fi
+echo "Hello $NAME $WISHES, I have been learning Shell Script"
