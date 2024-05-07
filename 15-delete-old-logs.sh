@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Fix the Source Directory
-SOURCE_DIR="/c/Darshan/DevOps/daws-76s/REPOS/shell-script"
+#SOURCE_DIR="/c/Darshan/DevOps/daws-76s/REPOS/shell-script"
+SOURCE_DIR="/home/centos/shell-script/"
 
 R="\e[31m"
 G="\e[32m"
