@@ -3,11 +3,11 @@
 NAME=""
 WISHES="GOOD MORNING"
 
-USAGE() { #Here we are giving the info about OPTIONS
+USAGE() { #Here we are giving the info about OPTIONS Document
     echo "USAGE:: $(basename $0) -n <name> -w <wishes>"
     echo "options::"
     echo " -n, Specify the Name (Mandatory)"
-    echo " -w, specify the Wishes (Optional) Default is GOOD MORNING"
+    echo " -w, specify the Wishes (Optional). Default is GOOD MORNING"
     echo " -h, Display HELP and Exit"
 
 }
@@ -26,6 +26,7 @@ done
 #We are writing some Validation for the OPTIONS.
 
 #if [ -z "$NAME" ] || [ -z "$WISHES" ]; then # if both are empty will show ERROR
+
 if [ -z "$NAME" ]; then #Now wishes is optional
     #echo "ERROR: Both -n and -w are Mandatory Options"
     echo "ERROR: -n is Mandatory"
