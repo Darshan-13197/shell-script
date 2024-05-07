@@ -12,12 +12,11 @@ USAGE() { #Here we are giving the info about OPTIONS
 
 }
 
-while getopts ":n:w:h:" opt; do
+while getopts "n:w:h" opt; do
 #using case 
-    case $opt in 
-    # For OPTIONS, there is no sequence here
+    case $opt in # For OPTIONS, there is no sequence here
         n) NAME=$OPTARGS;; # Special Variables
         w) WISHES=$OPTARGS;;
-        h) USAGE; exit;; #calling usage function
+        h|*) USAGE; exit;; #calling usage function
     esac
 done
