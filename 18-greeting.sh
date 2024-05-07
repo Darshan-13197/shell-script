@@ -25,8 +25,8 @@ done
 
 #We are writing some Validation for the OPTIONS.
 
-if [ -z "$NAME" ] || [ -z "$WISHES" ]; then
-if [ -z "$NAME" ]; then #Now wishes is optional
+if [ -z "$NAME" ] || [ -z "$WISHES" ]; then # if both are empty will show ERROR
+#if [ -z "$NAME" ]; then #Now wishes is optional
     echo "ERROR: Both -n and -w are Mandatory Options"
     echo "ERROR: -n is Mandatory"
     USAGE
