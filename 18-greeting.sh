@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME=""
-WISHES="GOOD MORNING"
+WISHES=""
 
 USAGE() { #Here we are giving the info about OPTIONS
     echo "USAGE:: $(basename $0) -n <name> -w <wishes>"
